@@ -1,0 +1,32 @@
+const Brand = ({ size = 40, showTagline = false }) => {
+  return (
+    <div className={showTagline ? "brand brand-center" : "brand"}>
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 40 40"
+        role="img"
+        aria-label="ShelfWise logo"
+      >
+        <rect width="40" height="40" rx="10" fill="#0f766e" />
+        <rect x="8" y="7" width="9" height="10" rx="2" fill="#ffffff" />
+        <rect x="19" y="11" width="13" height="6" rx="2" fill="#fbbf24" />
+        <rect x="6" y="17" width="28" height="3" rx="1.5" fill="#ffffff" />
+        <rect x="8" y="22" width="12" height="8" rx="2" fill="#fbbf24" />
+        <rect x="22" y="23" width="10" height="7" rx="2" fill="#ffffff" />
+        <rect x="6" y="30" width="28" height="3" rx="1.5" fill="#ffffff" />
+      </svg>
+
+      <div>
+        <span className="brand-name">
+          Shelf<span className="brand-accent">Wise</span>
+        </span>
+        {showTagline && (
+          <p className="brand-tagline">Manage your products, simply.</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Brand;
